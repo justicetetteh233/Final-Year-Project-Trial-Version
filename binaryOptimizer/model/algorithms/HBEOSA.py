@@ -124,6 +124,7 @@ def init_solve(MaxIter, pop_size, dimension, trainX, testX, trainy, testy, E, I,
     #print('human host')
     pop=eosa_initialise(pop_size, dimension, trainX, testX, trainy, testy, 'beosa')
 
+
     #print('EOSA_allfit')
     acc, cost, S=EOSA_allfit(pop, trainX, testX, trainy, testy)
     #print('after EOSA_allfit')
@@ -284,11 +285,11 @@ def evolve(MaxIter, model_rates, pop_size, dimension, trainX, testX, trainy, tes
         infected_size=_new_infected_change__(newi=I, eqtn=equation11(dif, len(newI)), e=epoch, fl='d')
         #print('D >>newI '+str(len(newI))+' size_of_infected='+str(infected_size))                        
         d =_die_infected_population__(I, infected_size)    
-        D =[D.append(d[i]) for i in range(len(d))]
+        D =[D.append(d[i]) for i_rebirth_2replace_dead_in_susceptible__ in range(len(d))]
 
         if d:
             I, incub, prob, pos=_remove_dead_or_recovered_from_infected__(inf=I, rc=d, inc=incub, pb=prob, pos=pos)
-        _rebirth_2replace_dead_in_susceptible__(deepcopy(d), S, dimension, trainX, testX, trainy, testy) 
+        (deepcopy(d), S, dimension, trainX, testX, trainy, testy) 
         #print('3   prob='+str(prob))
         #update population: combines len(S + I) = pop_size
         new_pop=deepcopy(S)#+deepcopy(self.I)

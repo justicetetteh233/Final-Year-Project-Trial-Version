@@ -361,8 +361,8 @@ def feature_optimizer(checkpoint_path, method, model, x_train, y_train, xeval, y
     '''
 
 
-    print(AllSol)
-    # i added it 
+   
+
     
     # Extract the binary arrays and fitness values from biniarySearchspaceData
     ex_binary_arrays = [item[1][0] for item in AllSol]
@@ -377,6 +377,7 @@ def feature_optimizer(checkpoint_path, method, model, x_train, y_train, xeval, y
 
     # end what i added 
     #Here is the transform function
+    print('gbest:', gbest)
     print('================== Transforming Features ======================')
     new_x_train = solutions_2_feature_transform(x_train, AllSol)
     

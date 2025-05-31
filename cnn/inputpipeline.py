@@ -74,20 +74,20 @@ class InputProcessor(object):
                 label=(file.split('_')[-1]).split('.')[0]   
                 tmpf=label #we try to extract a label form the file name. by splitting the first part of ht file name by _ select the first part and spit by . and pick the first part.
 
-                #am doing this because i dont have the right data set here.
-                rand_value = random.random() * 100
+                # #am doing this because i dont have the right data set here.
+                # rand_value = random.random() * 100
 
-                if rand_value < 20:
-                    tmpf = 'N'
-                elif rand_value < 40:
-                    tmpf = 'BC'
-                elif rand_value < 60:
-                    tmpf = 'BM'
-                elif rand_value < 80:
-                    tmpf = 'CALC'
-                else:
-                    tmpf = 'M'
-                #i am ending my random values here 
+                # if rand_value < 20:
+                #     tmpf = 'N'
+                # elif rand_value < 40:
+                #     tmpf = 'BC'
+                # elif rand_value < 60:
+                #     tmpf = 'BM'
+                # elif rand_value < 80:
+                #     tmpf = 'CALC'
+                # else:
+                #     tmpf = 'M'
+                # #i am ending my random values here 
                 
                 value_at_index = values.index(tmpf) #keys[values.index(label)]
                 label = value_at_index                    

@@ -83,13 +83,17 @@ def eosa_probs_initialise(partCount, dim, probpop, algorithm):
     return susc_pop#,population
 
 def eosa_initialise(partCount, dim, trainX, testX, trainy, testy, algorithm):
+
     susc_pop=[]
 
     population=np.zeros((partCount,dim))
+
     minn = 1
     maxx = math.floor(0.5*dim)
+
     if maxx<minn:
         maxx = minn + 1
+
     n=0
     prev_solution=None
 

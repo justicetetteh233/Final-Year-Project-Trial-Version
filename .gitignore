@@ -1,0 +1,13 @@
+# Ignore data, labeled and unlabeled dataset folders
+/data/
+/labled_data_set/
+/unlabled_data_set/
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+# VSCode settings
+.vscode/
+# MacOS system files
+.DS_Store
